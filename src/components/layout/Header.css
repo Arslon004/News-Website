@@ -1,0 +1,7 @@
+header .active{
+  color: red !important;
+}
+header .nav-link:first-child{
+  padding-left: 0;
+  padding-right: 40px;
+}
