@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import "./Cards.css";
 import { NavLink } from 'react-router-dom';
 
-
-import "./Cards.css"
-export class JeweleryCard extends Component {
+export class ProductsCard extends Component {
   render() {
     let { image, title, description, category, id, price, rating } = this.props;
     return (
@@ -14,8 +13,8 @@ export class JeweleryCard extends Component {
         <p className='card__price'>Price: <span>{price}$</span><br /> Rating: <span>{rating.rate}</span> Count: <span>{rating.count}</span></p>
         <NavLink to={`/${id}`} className='card__btn'>{category} Learn more...</NavLink>
       </div>
-    )
+    );
   }
 }
 
-export default JeweleryCard
+export default ProductsCard;

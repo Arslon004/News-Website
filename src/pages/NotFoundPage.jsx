@@ -1,15 +1,15 @@
 import React, { Component, Fragment } from 'react'
 
-export class Loading extends Component {
+export class NotFoundPage extends Component {
   render() {
     return (
       <Fragment>
         <section>
-          <div className="container">loading...</div>
+          <div className="container notfound-container"> NotFound </div>
         </section>
       </Fragment>
     )
   }
 }
 
-export default Loading
+export default NotFoundPage

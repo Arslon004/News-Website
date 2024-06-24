@@ -1,67 +1,51 @@
-import axios from 'axios'
-import { toast } from 'react-toastify';
-import React, { Component, Fragment } from 'react'
-
-import HomeCard from '../components/card/HomeCard';
-import Loading from './Loading';
+import React, { Component, Fragment } from 'react';
+import axios from 'axios';
+import Loading from '../components/shares/Loading';
+import ProductsCard from '../components/card/ProductsCard';
+import Backtop from '../components/shares/Backtop';
 
 export class HomePage extends Component {
-
   state = {
-    categories: [],
     loading: false,
-    total: 0,
-    currentPage: 1,
-  }
+    products: [],
+  };
 
-  async getCategories(page = 1) {
+  async getProducts() {
     try {
       this.setState({ loading: true });
-      const limit = 5;
-      const skip = (page - 1) * limit;
-      let { data } = await axios.get(`https://fakestoreapi.com/products`, { params: { limit, skip } });
-
-      let { data: allData } = await axios.get(`https://fakestoreapi.com/products`);
-
-      this.setState({ categories: data, total: allData.length, currentPage: page });
-    }
-    catch (err) {
+      let { data } = await axios.get("https://fakestoreapi.com/products");
+      this.setState({ products: data });
+    } catch (err) {
       console.log(err);
-      toast.error('Error');
-    }
-    finally {
+    } finally {
       this.setState({ loading: false });
     }
   }
 
   componentDidMount() {
-    this.getCategories();
+    this.getProducts();
   }
 
   render() {
-    const { categories, loading, total, currentPage } = this.state;
-
-    const pages = Math.ceil(total / 5);
-
-    const getPage = (page) => {
-      this.getCategories(page);
-    }
-
+    let { loading, products } = this.state;
     return (
       <Fragment>
         <section>
           <div className="container">
-            <h1>Home Page {total}</h1>
-            {loading ? <Loading /> :
-              categories.map((category) => <HomeCard key={category.id} {...category} />)}
-
-            {Array.from({ length: pages }, (_, i) => (
-              <button key={i} onClick={() => getPage(i + 1)}>{i + 1}</button>
-            ))}
+            <h2 className='pages_title'>All products</h2>
+            {loading ? (
+              <Loading />
+            ) : (
+              <div className="products-container">
+                {products.map((product) => (
+                  <ProductsCard key={product.id} {...product} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </Fragment>
-    )
+    );
   }
 }
 

@@ -1,12 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 html{
   box-sizing: border-box;
 }
 *,*::before,*::after{
   box-sizing: border-box;
 }
+body{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 a{
   text-decoration: none;
 }
 ul{
   list-style-type: none;
+}
+
+.notfound-container,.loading{
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 50px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: url(../src/assets/images/flag.png);
+  background-size: 340px;
+}
+
+header{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.backTop{
+  position: fixed;
+  background-color: gold;
+  bottom: 30px;right: 30px;
 }

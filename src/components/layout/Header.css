@@ -1,7 +1,25 @@
-header .active{
-  color: red !important;
+.news-footer{
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: url(../../assets/images/flag.png);
+  background-size: 190px;
 }
-header .nav-link:first-child{
+.nav-container{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.list .list-link{
   padding-left: 0;
-  padding-right: 40px;
+  padding-right: 0;
+  font-weight: bold;
+  color: #fff !important;
+  font-size: 20px;
+}
+.list .active{
+  color: #000 !important;
 }

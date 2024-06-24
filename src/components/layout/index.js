@@ -1,8 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { Outlet } from 'react-router-dom'
-
 import Header from './Header'
 import Footer from './Footer'
+import { Outlet } from 'react-router-dom'
 
 export class Layout extends Component {
   render() {
@@ -10,7 +9,7 @@ export class Layout extends Component {
       <Fragment>
         <Header/>
         <main>
-        <Outlet/>
+          <Outlet/>
         </main>
         <Footer/>
       </Fragment>

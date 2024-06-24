@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
 
+import "./Header.css";
+
 export class Footer extends Component {
   render() {
     return (
-      <div className='container'>Footer</div>
+      <footer>
+        <div className="container text-center news-footer">
+          Made by Arslon Bozorov
+        </div>
+      </footer>
     )
   }
 }
