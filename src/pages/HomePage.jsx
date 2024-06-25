@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import Loading from '../components/shares/Loading';
 import ProductsCard from '../components/card/ProductsCard';
 import Backtop from '../components/shares/Backtop';
@@ -17,6 +18,7 @@ export class HomePage extends Component {
       this.setState({ products: data });
     } catch (err) {
       console.log(err);
+      toast.error("Error")
     } finally {
       this.setState({ loading: false });
     }

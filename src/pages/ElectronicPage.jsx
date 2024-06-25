@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { Component, Fragment } from 'react'
+import { toast } from 'react-toastify';
 import Loading from '../components/shares/Loading';
 import ElectronicsCard from '../components/card/ElectronicsCard';
 
@@ -17,6 +18,7 @@ export class ElectronicPage extends Component {
     }
     catch(err){
       console.log(err);
+      toast.error("Error");
     }
     finally{
       this.setState({loading:false});

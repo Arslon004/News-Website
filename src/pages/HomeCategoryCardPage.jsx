@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import React, { Component, Fragment } from 'react'
 import Loading from '../components/shares/Loading';
 
@@ -18,6 +19,7 @@ export class HomeCategoryCardPage extends Component {
     }
     catch(err){
       console.log(err);
+      toast.error("Error")
     }
     finally{
       this.setState({loading:false})
