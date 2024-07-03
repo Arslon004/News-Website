@@ -30,11 +30,13 @@ export class HomePage extends Component {
 
   render() {
     let { loading, products } = this.state;
+
     return (
       <Fragment>
         <section>
           <div className="container">
-            <h2 className='pages_title'>All products</h2>
+            <h2 className='pages_title'>All products ({products.length})</h2>
+
             {loading ? (
               <Loading />
             ) : (
