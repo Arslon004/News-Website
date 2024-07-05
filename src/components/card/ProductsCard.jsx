@@ -11,7 +11,7 @@ export class ProductsCard extends Component {
         <h2 className="card__title">{title}</h2>
         <p className='card__desc'>{description}</p>
         <p className='card__price'>Price: <span>{price}$</span><br /> Rating: <span>{rating.rate}</span> Count: <span>{rating.count}</span></p>
-        <NavLink to={`/${id}`} className='card__btn'>{category} Learn more...</NavLink>
+        <NavLink to={`/product-page/${id}`} className='card__btn'>{category} Learn more...</NavLink>
       </div>
     );
   }

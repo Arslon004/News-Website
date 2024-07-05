@@ -18,8 +18,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path="home" element={<HomePage />} />
-          <Route path="/:pageId" element={<HomeCategoryCardPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="product-page/:pageId" element={<HomeCategoryCardPage />} />
 
           <Route path="jewelery" element={<Jewelery />} />
           <Route path="electronics" element={<ElectronicPage />} />

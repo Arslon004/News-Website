@@ -44,7 +44,7 @@ export class HomeCategoryCardPage extends Component {
               <p style={{fontSize:"25px",color:"chocolate",maxWidth:"85%"}}>{categoryCardPage?.description}</p>
               <p style={{color:"darkmagenta",fontSize:"40px"}}>Price:<span style={{fontWeight:"bold",color:"teal",fontSize:"45px"}}>{categoryCardPage?.price}$</span></p>
 
-              <Link to={`/home`} style={{paddingTop:"10px",paddingBottom:"10px",backgroundColor:"blue",paddingLeft:"20px",paddingRight:"20px",color:"white",opacity:"0.8",borderRadius:"6px",cursor:"pointer"}}>Back to Home</Link>
+              <Link to={`/`} style={{paddingTop:"10px",paddingBottom:"10px",backgroundColor:"blue",paddingLeft:"20px",paddingRight:"20px",color:"white",opacity:"0.8",borderRadius:"6px",cursor:"pointer"}}>Back to Home</Link>
              </div>
             }
           </div>
