@@ -34,7 +34,7 @@ export class ElectronicPage extends Component {
       <Fragment>
       <section>
         <div className="container">
-          <h2 className='pages_title'>Electronics</h2>
+          <h2 className='pages_title'>Electronics ({electronics.length})</h2>
           {loading ? (<Loading/>)
           :
           (<div className='products-container'>

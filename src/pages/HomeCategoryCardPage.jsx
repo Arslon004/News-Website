@@ -2,6 +2,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import React, { Component, Fragment } from 'react'
 import Loading from '../components/shares/Loading';
+import { Link } from 'react-router-dom';
 
 export class HomeCategoryCardPage extends Component {
 
@@ -42,7 +43,8 @@ export class HomeCategoryCardPage extends Component {
               <h1 style={{fontSize:"40px",color:"cadetblue"}}>{categoryCardPage?.title}</h1>
               <p style={{fontSize:"25px",color:"chocolate",maxWidth:"85%"}}>{categoryCardPage?.description}</p>
               <p style={{color:"darkmagenta",fontSize:"40px"}}>Price:<span style={{fontWeight:"bold",color:"teal",fontSize:"45px"}}>{categoryCardPage?.price}$</span></p>
-              <button style={{border:"0",padding:"10px 60px",backgroundColor:"blue",opacity:"0.7",color:"white",fontSize:"20px",fontWeight:"700"}}>Buy now</button>
+
+              <Link to={`/home`} style={{paddingTop:"10px",paddingBottom:"10px",backgroundColor:"blue",paddingLeft:"20px",paddingRight:"20px",color:"white",opacity:"0.8",borderRadius:"6px",cursor:"pointer"}}>Back to Home</Link>
              </div>
             }
           </div>

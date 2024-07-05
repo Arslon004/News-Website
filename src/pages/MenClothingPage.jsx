@@ -32,7 +32,7 @@ export class MenClothingPage extends Component {
       <Fragment>
       <section>
         <div className="container">
-          <h2 className='pages_title'>Men's clothing</h2>
+          <h2 className='pages_title'>Men's clothing ({menClothingCards.length})</h2>
           {loading ? (<Loading/>)
           :
           (<div className='products-container'>

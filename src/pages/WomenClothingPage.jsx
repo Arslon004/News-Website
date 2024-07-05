@@ -34,7 +34,7 @@ export class WomenClothingPage extends Component {
       <Fragment>
       <section>
         <div className="container">
-        <h2 className="pages_title">Women's Clothing</h2>
+        <h2 className="pages_title">Women's Clothing ({womenClothingCards.length})</h2>
         {loading ? (<Loading/>)
         :
         (<div className='products-container'>

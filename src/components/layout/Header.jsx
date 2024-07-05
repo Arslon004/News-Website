@@ -8,7 +8,7 @@ export class Header extends Component {
         <nav className="container nav-container">
           <ul className="nav d-flex justify-content-between list ">
             <li className="nav-item list-item">
-              <NavLink className="nav-link list-link " to="/">Home</NavLink>
+              <NavLink className="nav-link list-link " to="/home">Home</NavLink>
             </li>
             <li className="nav-item">
               <NavLink  className="nav-link list-link" to="/jewelery">Jewelery</NavLink>

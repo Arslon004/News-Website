@@ -12,14 +12,13 @@ const CartPage = lazy(()=>import( "./pages/CartPage"));
 const NotFoundPage = lazy(()=>import( "./pages/NotFoundPage"));
 const Layout = lazy(()=>import( "./components/layout"));
 const HomeCategoryCardPage = lazy(()=>import( "./pages/HomeCategoryCardPage"));
-
 function App() {
   return (
     <Suspense fallback={<Loading/>}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element={<HomePage />} />
+          <Route path="home" element={<HomePage />} />
           <Route path="/:pageId" element={<HomeCategoryCardPage />} />
 
           <Route path="jewelery" element={<Jewelery />} />
